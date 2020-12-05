@@ -6,20 +6,24 @@
   </div><br>
 
 <h2>Display your first ship here</h2>
-  <% @ships.each do |ship| %>
+  <% @ships.each_with_index do |ship, i| %>
     <div class="ship">
-      <p>Ship: <%= ship_name_1.name %></p><br>
-      <p>Type: <%= ship_type_1.type %></p><br>
-      <p>Booty: <%= ship_booty_1.booty %></p><br>
+      <% if i == 0 %>
+      <p>Ship: <%= ship.name %></p><br>
+      <p>Type: <%= ship.type %></p><br>
+      <p>Booty: <%= ship.booty %></p><br>
+      <% end %>
     </div><br>
   <% end %>
 
 <h2>Display your second ship here</h2>
-  <% @ships.each do |ship| %>
+  <% @ships.each_with_index do |ship, j| %>
     <div class="ship">
-      <p>Name: <%= ship_name_2.name %></p><br>
-      <p>Type: <%= ship_type_2.type %></p><br>
-      <p>Booty: <%= ship_booty_2.booty %></p><br>
+    <% if j == 1 %>
+      <p>Name: <%= ship.name %></p><br>
+      <p>Type: <%= ship.type %></p><br>
+      <p>Booty: <%= ship.booty %></p><br>
+      <% end %>
     </div><br>
   <% end %>
 
