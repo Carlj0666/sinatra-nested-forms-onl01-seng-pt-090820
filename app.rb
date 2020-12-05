@@ -4,8 +4,9 @@ module FormsLab
   class App < Sinatra::Base
 
     # code other routes/actions here
-    get '/' do
+      get '/' do
       "Welcome to the Nested Forms Lab!"
+      erb :root
     end
 
     get '/new' do
@@ -22,6 +23,8 @@ module FormsLab
         
         Ship.new(name: ship[:name], type: ship[:type], booty: ship[:booty])
       end
+
+      @ships = ship.all
 
       erb :"pirates/show"
     end
