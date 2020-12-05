@@ -16,11 +16,11 @@ module FormsLab
     #ISSUES FROM HERE, PARAMS LOOK GOOD, RETURNED INFO NOT CORRECT? CHECK PRY
     post '/pirates' do
       #binding.pry
-      @pirate = Pirate.new(params[:name], params[:weight], params[:height])
+      @pirate = Pirate.new(name: params[:name], weight: params[:weight], height: params[:height])
 
-      params[:ships].each do |ship|
+      params[:pirate][:ships].each do |ship|
         
-        Ship.new(params[:name], params[:type], params[:booty])
+        Ship.new(params [:name], params[:type], params[:booty])
       end
 
       erb :"pirates/show"

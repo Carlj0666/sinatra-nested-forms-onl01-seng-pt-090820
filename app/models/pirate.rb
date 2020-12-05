@@ -8,7 +8,7 @@ class Pirate
     @name = params[:name]
     @weight = params[:weight]
     @height = params[:height]
-    @pirate = Pirate.new(params[:name], params[:weight], params[:height])
+   
     @@all << self
   end
 
