@@ -20,7 +20,7 @@ module FormsLab
 
       params[:pirate][:ships].each do |ship|
         
-        Ship.new(name: params[:name], type: params[:type], booty: params[:booty])
+        Ship.new(name: ship[:name], type: ship[:type], booty: ship[:booty])
       end
 
       erb :"pirates/show"
